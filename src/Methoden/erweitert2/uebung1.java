@@ -1,4 +1,4 @@
-package Methoden2;
+package Methoden.erweitert2;
 import java.util.*;
 
 public class uebung1 {
@@ -131,18 +131,17 @@ public class uebung1 {
     public static void multiplizieren(){
         matrize4 = new int[matrize1.length][matrize1.length];
 
-        for (int i=0;i<matrize1.length;i++){
-                matrize4[i][i]=matrize1[i][i]*matrize2[i][i];
-                System.out.println(matrize1[i][i] +"*"+matrize2[i][i]+"="+matrize4[i][i]);
-                if(i != matrize1.length-1){
-                    matrize4[i][i]=(matrize1[i][i+1]*matrize2[i+1][i])+matrize4[i][i];
-                    System.out.println(matrize1[i][i+1] +"*"+matrize2[i+1][i]+"="+matrize1[i][i+1]*matrize2[i+1][i]);
+        for (int i=0;i<matrize4.length;i++){
+            for (int j=0;j<matrize4.length;j++){
+                for(int k=0; k < matrize4.length;k++){
+                    matrize4[i][j] += matrize1[i][k]*matrize2[k][j];
                 }
+            }
         }
 
-        for (int i = 0; i<matrize1.length;i++){
-            for (int j = 0; j<matrize1.length;j++){
-                if(j != matrize1.length-1){
+        for (int i = 0; i<matrize4.length;i++){
+            for (int j = 0; j<matrize4.length;j++){
+                if(j != matrize4.length-1){
                     System.out.print(matrize4[i][j]+", ");
                 }else System.out.print(matrize4[i][j]);
             }
