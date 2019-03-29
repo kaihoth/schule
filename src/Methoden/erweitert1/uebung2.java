@@ -10,16 +10,45 @@ public class uebung2 {
     }
 
     public static String getTextChars(String text){
-        String counter = "";
         int a=0,e=0,i=0,o=0,u=0;
 
-        for (int j =0;i<text.length();j++){
+        for (int j =0;j<text.length();j++){
             switch (text.charAt(j)){
-                case 'a':a++;
+                case 'a':
+                    a++;
+                    break;
+                case 'A':
+                    a++;
+                    break;
+                case 'e':
+                    e++;
+                    break;
+                case 'E':
+                    e++;
+                    break;
+                case 'i':
+                    i++;
+                    break;
+                case 'I':
+                    i++;
+                    break;
+                case 'o':
+                    o++;
+                    break;
+                case 'O':
+                    o++;
+                    break;
+                case 'u':
+                    u++;
+                    break;
+                case 'U':
+                    u++;
+                    break;
+
             }
         }
 
-        return(counter);
+        return("A="+a+", E="+e+", I="+i+", O="+o+", U="+u);
     }
 
 }
